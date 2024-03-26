@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #451608;
+  --primary: #ba6817;
+  --secondary: #7e3200;
+  --accent: #7d3807;
+  --ability: #b1e8a7;
+  --cost: #721b04;
+  --ability-back: #2e0d08;
+  --ink: #0c0201;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Frijole";
+}
+
+.border {
+  border-style: solid;
+  width: 320px;
+  height: 500px;
+  border-radius: 5%;
+  border-color: black;
+  border-width: 3px;
+}
+
+.title {
+  border-radius: 5% 15% 0% 0%;
+  background-color: var(--primary);
+  border-bottom: 3px solid var(--ink);
+}
+
+.portrait {
+  border-bottom: 3px solid var(--ink);
+}
+
+.ability {
+  width: 100px;
+  height: 100px;
+  background-color: var(--ability-back);
+  margin-top: 16.875px;
+  outline: dotted;
+  outline-width: 3px;
+  outline-color: var(--ability-back);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-tint {
+  color: var(--cost);
+  position: relative;
+  margin-top: 5px;
+  margin-left: 275px;
+}
+.fa-paw {
+  color: var(--accent);
+  position: var(--absolute);
+  margin-top: -5px;
+}
+.sac-icon {
+  color: var(--ability);
+  margin-top: 1px;
+  width: 90px;
+  height: 90px;
+}
+.fa-heart {
+  color: var(--accent);
+}

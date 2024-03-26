@@ -1,2 +1,5 @@
 # Inscryption_Stoat
-Stoat from Inscryption
+
+## DO NOT FREE
+
+This is a touch up of an older project from CodePen
