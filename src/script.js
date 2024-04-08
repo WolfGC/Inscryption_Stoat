@@ -8,6 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(text, 20000);
         setTimeout(hint, 33000);
     }
+    // Create a MutationObserver to monitor changes to the src attribute of the image
+    var observer = new MutationObserver(function (mutationsList) {
+        for (var _i = 0, mutationsList_1 = mutationsList; _i < mutationsList_1.length; _i++) {
+            var mutation = mutationsList_1[_i];
+            if (mutation.type === 'attributes' && mutation.attributeName === 'src' && !portraitImg.getAttribute("src")) {
+                // If src attribute is deleted, call free()
+                free();
+            }
+        }
+    });
+    // Start observing the target node for attribute changes
+    observer.observe(portraitImg, { attributes: true });
 });
 function typeText(element, strings, typeSpeed, phraseDelay) {
     var index = 0;

@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(text, 20000);
     setTimeout(hint, 33000);
   }
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'src' && !portraitImg.getAttribute("src")) {
+        free();
+      }
+    }
+  });
+
+  observer.observe(portraitImg, { attributes: true });
 });
 
 function typeText(element: HTMLElement, strings: string[], typeSpeed: number, phraseDelay: number) {
